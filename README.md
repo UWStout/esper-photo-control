@@ -18,4 +18,4 @@ We are attempting to create two interfaces:
 - A high-level interface where the individual commands for the trigger boxes are predefined and the quirks of communicating with it are handled for you.
 - A low-level interface that simply establishes a connection and let's you send any commands you like.
 
-We hope to build the library in such a way that changes in behaviors and instruciton sets between firmware versions can be accounted for in the high-level interface without much effort.  However, the low-level interface is there to allow use of newer firmware or other changes without us having to build a new higher interface for it.
+We hope to build the library in such a way that changes in behaviors and instruction sets between firmware versions can be accounted for in the high-level interface without much effort.  However, the low-level interface is there to allow use of newer firmware or other changes without us having to build a new higher interface for it.
