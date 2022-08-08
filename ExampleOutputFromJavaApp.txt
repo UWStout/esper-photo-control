@@ -1,0 +1,29 @@
+Software output:
+_________________Setting the current settings: ________________________
+IN DELAY MILS: 0
+LINK DELAY MILS:0
+LIGHT ENABLE: true
+BULB TIME: 20
+INTERVALOMETER REPEATS: 0
+MODE: 0
+SEQUENCER: SEQ NUM ACTIVE STAGES: 1
+SEQ CURRENT ACTIVE STAGE: 0
+SEQUENCE STAGE 0:
+SH EN ARR: 1 1 1 1 1 1
+FOC EN ARR: 1 1 1 1 1 1
+DELAYS ARR: 0 0 0 0 0 0
+STAGE REPEATS: 0
+STAGE REPEAT COUNT: 0
+SETTING DESCRIPTOR MODE: 0
+_________________________________________
+Send:p
+Send:k1
+Rec:tenFour
+
+Send:F1
+REC:{tenFour}OK
+Send:S
+Send:F0
+REC:{tenFour}OK
+Send:b20.0
+REC:{tenFour}OK
