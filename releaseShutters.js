@@ -1,13 +1,11 @@
-import TriggerBox13 from './lib/TriggerBox13.js'
-import { listPossibleTriggerBoxes } from './lib/triggerBoxFactory.js'
-import { waitForMilliseconds } from './lib/util.js'
+import ESPER from './lib/index.js'
 
 // Check command line arguments and print usage if incorrect
 if (process.argv.length < 3) {
   console.log(`Usage: node ${process.argv[1]} <serial port name>`)
 
   // Get list of trigger boxes
-  const devices = await listPossibleTriggerBoxes()
+  const devices = await ESPER.listPossibleTriggerBoxes()
   if (devices.length < 1) {
     console.error('No trigger boxes detected')
   } else {
@@ -24,14 +22,14 @@ const PORT_PATH = process.argv[2]
 
 // Initialize trigger box object
 console.log(`** Connecting to ${PORT_PATH} **`)
-const triggerBox = new TriggerBox13(PORT_PATH)
+const triggerBox = new ESPER.TriggerBox(PORT_PATH)
 triggerBox.on('ready', async () => {
   // Print connection string
   console.log('Connected to trigger box ' + triggerBox.boxId + ' in ' + triggerBox.mode + ' mode on port "' + PORT_PATH + '"')
 
   try {
     // Pause a bit before sending commands
-    await waitForMilliseconds(1000)
+    await ESPER.waitForMilliseconds(1000)
 
     // Enable link
     console.log('Enabling link ...')

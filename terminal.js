@@ -1,7 +1,7 @@
-import TriggerBox13 from './lib/TriggerBox13.js'
+import TriggerBox13 from './lib/boxes/TriggerBox13.js'
 import readline from 'readline'
 
-import { listPossibleTriggerBoxes } from './lib/triggerBoxFactory.js'
+import { listPossibleTriggerBoxes } from './lib/other/triggerBoxFactory.js'
 
 // Check command line arguments and print usage if incorrect
 if (process.argv.length < 3) {
